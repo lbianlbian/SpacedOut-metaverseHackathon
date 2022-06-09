@@ -1,22 +1,30 @@
-import React from "react";
-import "./BI.css";
+import React, { useState } from "react";
+import BussForm1 from "../../components/BussForm/BussForm1";
+import BussForm2 from "../../components/BussForm/BussForm2";
+import BussIntro from "../../components/BussForm/BussIntro";
 
 const BusinessIntro = () => {
+  const [isForm1Active, setIsForm1Active] = useState("");
+  const [isForm2Active, setIsForm2Active] = useState("");
+
+  const toggleForm1 = () => {
+    setIsForm1Active((prevState) => true);
+    setIsForm2Active((prevState) => false);
+  };
+  const toggleForm2 = (e) => {
+    setIsForm2Active((prevState) => true);
+    setIsForm1Active((prevState) => false);
+    e.preventDefault();
+  };
+
+  if (isForm1Active == true) {
+    return <BussForm1 toggleForm2={toggleForm2} />;
+  } else if (isForm2Active == true) {
+    return <BussForm2 />;
+  }
   return (
-    <div className="bi-wrap">
-      <h1 className="bi-title">
-        <span>Hello!</span> Businesses & Brands
-      </h1>
-      <p className="about-body">
-        Welcome to SpacedOut! We are here to help you create stronger
-        relationships with your customers through NFT technology. We aim to
-        create an environment where your most loyal customers have access to
-        special offerings from your brand while simultaneously generating
-        revenue from users trading your NFT. We make it extremely easy for you
-        to create an NFT instantly that you can launch with no technical
-        background right on our site.
-      </p>
-      <div className="market-btn">Create Your NFT!</div>
+    <div>
+      <BussIntro toggleForm1={toggleForm1} />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import "./bussform.css";
 
-const BussForm1 = () => {
+const BussForm1 = (props) => {
   return (
     <div className="form-wrap">
       <div className="form1-container">
@@ -42,7 +42,9 @@ const BussForm1 = () => {
             rows="10"
           ></textarea>
           <br />
-          <button type="submit">Apply for NFT Approval</button>
+          <button type="submit" onClick={props.toggleForm2}>
+            Apply for NFT Approval
+          </button>
           <br />
         </form>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./LP.css";
 
 const LandingPage = () => {
@@ -35,7 +36,9 @@ const LandingPage = () => {
           </svg>
         </div>
         <div className="market-btn">MarketPlace</div>
-        <div className="business-btn">Business</div>
+        <Link to="/business" className="business-btn">
+          Business
+        </Link>
       </div>
       <div className="timeline-sect">
         <h3 className="about-first">Marketplace.</h3>

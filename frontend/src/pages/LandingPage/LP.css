@@ -38,6 +38,7 @@
     line-height: 3ch;
     font-size: 3ch;
     cursor: pointer;
+    text-decoration: none;
 }
 .market-btn{
     margin-right: 4rem;
