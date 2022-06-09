@@ -17,9 +17,9 @@ const BusinessIntro = () => {
     e.preventDefault();
   };
 
-  if (isForm1Active == true) {
+  if (isForm1Active === true) {
     return <BussForm1 toggleForm2={toggleForm2} />;
-  } else if (isForm2Active == true) {
+  } else if (isForm2Active === true) {
     return <BussForm2 />;
   }
   return (
