@@ -82,14 +82,14 @@ const Nav = () => {
             <path
               d="M2 2L37.0571 37.0571"
               stroke="white"
-              stroke-width="4"
-              stroke-linecap="round"
+              strokeWidth="4"
+              strokeLinecap="round"
             />
             <path
               d="M2 37.0571L37.0571 2"
               stroke="white"
-              stroke-width="4"
-              stroke-linecap="round"
+              strokeWidth="4"
+              strokeLinecap="round"
             />
           </svg>
         </div>

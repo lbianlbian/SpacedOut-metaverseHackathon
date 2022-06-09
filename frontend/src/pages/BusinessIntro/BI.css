@@ -1,0 +1,18 @@
+.bi-title{
+    font-family: var(--t-font);
+    color: rgb(var(--l-color));
+    font-size: 8ch;
+    margin: 8rem 5rem 2rem 20rem;
+}
+.bi-title span{
+    background-color: rgb(var(--a-color));
+    color: rgb(var(--d-color));
+}
+.bi-wrap .about-body{
+    margin-left: 25rem;
+    line-height: 3ch;
+}
+.bi-wrap .market-btn{
+    left: 50%;
+    margin-top: 8rem;
+}
