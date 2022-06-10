@@ -1,0 +1,212 @@
+.wallet-btn-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.wallet-btn-wrap .title{
+    font-family: var(--t-font);
+    color: rgb(var(--l-color));
+    font-size: 6ch;
+    margin-left: 7rem;
+    margin-top: 4rem;
+    position: relative;
+}
+.wallet-btn-wrap .title::before{
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    background-color: rgb(var(--a-color));
+    z-index: -1;
+}
+.wallet-btn-wrap .wallet-btn{
+    width: 20rem;
+    height: 3rem;
+    border: 2px solid rgb(var(--a-color));
+    color: rgb(var(--l-color));
+    text-align: center;
+    font-family: var(--t-font);
+    font-size: 2.5ch;
+    line-height: 3.6ch;
+    margin-top: 4rem;
+    margin-right: 7rem;
+    position: relative;
+    cursor: pointer;
+}
+.wallet-btn-wrap .wallet-btn::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(var(--l-color));
+    left: -.5rem;
+    top: -.5rem;
+    z-index: -1;
+}
+.wallet-btn-wrap .wallet-btn:hover{
+    background-color: rgb(var(--a-color));
+    color: rgb(var(--d-color));
+    font-weight: 600;
+}
+.wallet-btn-wrap .wallet-btn:hover::before{
+    background-color: rgb(var(--l-color));
+}
+
+.launch-tile-wrap{
+    margin: 7rem 15rem;
+    display: grid;
+}
+.launch-tile-body{
+    grid-column: 1/2;
+}
+.launch-tile-body h1{
+    font-family: var(--t-font);
+    color: rgb(var(--l-color));
+    font-size: 4ch;
+}
+.launch-tile-body h1 span{
+    background-color: rgb(var(--a-color));
+}
+.launch-tile-body p{
+    font-family: var(--b-font);
+    color: rgb(var(--l-color));
+    font-size: 2ch;
+    margin-top: 2rem;
+    margin-right: 17rem;
+}
+.mint-btn{
+    width: 30rem;
+    height: 3rem;
+    border: 2px solid rgb(var(--a-color));
+    margin-top: 2rem;
+    color: rgb(var(--l-color));
+    font-family: var(--t-font);
+    font-size: 3ch;
+    text-align: center;
+    position: relative;
+}
+.mint-btn:hover{
+    background-color: rgb(var(--a-color));
+    color: rgb(var(--d-color));
+    font-weight: 600;
+}
+.mint-btn::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: -.5rem;
+    top: -.5rem;
+    border: 2px solid rgb(var(--l-color));
+    z-index: -1;
+}
+.mint-btn:hover::before{
+    background-color: rgb(var(--l-color));
+}
+
+.launch-img{
+    grid-column: 2/3;
+    width: 35rem;
+    height: 35rem;
+    background-image: url(../../asset/Images/gucci.jpg);
+    background-size: cover;
+}
+
+@media (max-width: 1440px) {
+    .launch-tile-wrap{
+        margin: 7rem 9rem;
+    }
+    .launch-tile-body p{
+        margin-right: 8rem;
+    }
+    .launch-img{
+        width: 30rem;
+        height: 30rem;
+    }
+}
+@media (max-width: 1220px) {
+    .wallet-btn-wrap .title{
+        font-size: 5ch;
+    }
+    .wallet-btn-wrap .wallet-btn{
+        width: 15rem;
+        font-size: 2ch;
+    }
+    .launch-tile-body h1{
+        font-size: 3ch;
+    }
+    .launch-tile-body p{
+        font-size: 1.7ch;
+        margin-right: 7rem;
+    }
+    .mint-btn{
+        width: 20rem;
+        font-size: 2ch;
+        line-height: 4ch;
+    }
+}
+@media (max-width: 1024px) {
+    .launch-tile-wrap{
+        margin: 7rem 7rem;
+    }
+    .launch-img{
+        width: 25rem;
+        height: 25rem;
+    }
+}
+@media (max-width: 768px){
+    .wallet-btn-wrap .title{
+        font-size: 4ch;
+        margin-left: 3rem;
+    }
+    .wallet-btn-wrap .wallet-btn{
+        font-size: 1.5ch;
+        line-height: 4ch;
+        height: 2.5rem;
+        width: 10rem;
+        margin-right: 3rem;
+    }
+    .launch-tile-wrap{
+        margin: 4rem 4rem;
+    }
+    .launch-img{
+        width: 18rem;
+        height: 18rem;
+    }
+    .launch-tile-body p {
+        font-size: 1.5ch;
+    }
+    .mint-btn{
+        width: 16rem;
+    }
+}
+@media (max-width: 425px) {
+    .wallet-btn-wrap .title{
+        margin-left: 1rem;
+        font-size: 3.5ch;
+    }
+    .wallet-btn-wrap .wallet-btn{
+        width: 8rem;
+        margin-right: 1rem;
+    }
+    .launch-tile-wrap{
+        margin: 3rem 1.5rem;
+    }
+    .launch-tile-body{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .launch-img{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        width: 90vw;
+        height: 90vw;
+        margin-bottom: 1rem;
+    }
+    .launch-tile-body p{
+        margin-right: 1.5rem;
+    }
+    .mint-btn{
+        width: 90vw;
+    }
+}

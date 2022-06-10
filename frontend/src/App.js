@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from "./components/NavBar/Nav";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import BusinessIntro from "./pages/BusinessIntro/BusinessIntro";
+import MarketplaceLaunchpad from "./pages/Market/MarketplaceLaunchpad";
 
 function App() {
   return (
@@ -13,8 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/business" element={<BusinessIntro />} />
-          {/* <BussForm1 />
-          <BussForm2 /> */}
+          <Route path="/marketplace" element={<MarketplaceLaunchpad />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,7 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./bussform.css";
 
 const BussForm2 = () => {
+  const navigate = useNavigate();
+  const toggleToLaunchpad = (e) => {
+    e.preventDefault();
+    navigate("/marketplace");
+  };
   return (
     <div className="form-wrap">
       <div className="form2-container">
@@ -40,7 +46,9 @@ const BussForm2 = () => {
           <br />
           <input type="time" name="tom" id="tom" />
           <br />
-          <button type="submit">Continue</button>
+          <button type="submit" onClick={toggleToLaunchpad}>
+            Continue
+          </button>
           <br />
         </form>
       </div>

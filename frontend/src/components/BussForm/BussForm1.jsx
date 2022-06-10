@@ -6,8 +6,7 @@ const BussForm1 = (props) => {
     <div className="form-wrap">
       <div className="form1-container">
         <h1>Apply for your company NFT</h1>
-        <form action="">
-          <button>Select Wallet</button>
+        <form>
           <br />
           <label htmlFor="name">Name:</label>
           <br />
