@@ -15,4 +15,69 @@
 .bi-wrap .market-btn{
     left: 50%;
     margin-top: 8rem;
+    margin-bottom: 5rem;
+}
+
+@media (max-width: 1440px) {
+    .bi-title{
+        font-size: 6ch;
+        margin-left: 13rem;
+    }
+    .bi-wrap .about-body{
+        margin-right: 16rem;
+    }
+    .bi-wrap .market-btn{
+        left: 60%;
+        margin-top: 4rem;
+    }
+}
+@media (max-width: 1220px) {
+    .bi-title{
+        font-size: 4.5ch;
+        margin-left: 10rem;
+    }
+    .bi-wrap .about-body{
+        margin-left: 15rem;
+        font-size: 2ch;
+        line-height: 2.5ch;
+    }
+    .bi-wrap .market-btn{
+        height: 3rem;
+        font-size: 2ch;
+        line-height: 4ch;
+    }
+}
+@media (max-width: 768px) {
+    .bi-title{
+        margin-left: 4rem;
+    }
+    .bi-wrap .about-body{
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+    .bi-wrap .market-btn{
+        width: 35vw;
+        left: 50%;
+    }
+    .bi-wrap .market-btn::before{
+        top: -.5rem;
+        left: -.5rem;
+    }
+}
+@media (max-width: 425px) {
+    .bi-title{
+        margin-left: 2rem;
+        font-size: 4ch;
+        margin-right: 2rem;
+        margin-top: 4rem;
+    }
+    .bi-wrap .about-body{
+        margin-left: 3rem;
+        margin-right: 2rem;
+    }
+    .bi-wrap .market-btn{
+        width: 65vw;
+        left: 0;
+        margin-left: 3rem;
+    }
 }

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
 }
-.wallet-btn-wrap .title{
+.wallet-btn-wrap .title, .market-wrap .title{
     font-family: var(--t-font);
     color: rgb(var(--l-color));
     font-size: 6ch;
@@ -10,7 +10,7 @@
     margin-top: 4rem;
     position: relative;
 }
-.wallet-btn-wrap .title::before{
+.wallet-btn-wrap .title::before, .market-wrap .title::before{
     position: absolute;
     content: "";
     width: 50%;
@@ -18,6 +18,9 @@
     top: 50%;
     background-color: rgb(var(--a-color));
     z-index: -1;
+}
+.market-wrap .title{
+    width: fit-content;
 }
 .wallet-btn-wrap .wallet-btn{
     width: 20rem;
@@ -50,6 +53,18 @@
 }
 .wallet-btn-wrap .wallet-btn:hover::before{
     background-color: rgb(var(--l-color));
+}
+.wallet-link{
+    font-family: var(--t-font);
+    color: rgb(var(--a-color));
+    font-size: 3ch;
+    margin-top: 4rem;
+    margin-right: 7rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+.wallet-link:hover{
+    text-decoration: underline;
 }
 
 .launch-tile-wrap{
@@ -84,6 +99,7 @@
     font-size: 3ch;
     text-align: center;
     position: relative;
+    cursor: pointer;
 }
 .mint-btn:hover{
     background-color: rgb(var(--a-color));
@@ -125,12 +141,15 @@
     }
 }
 @media (max-width: 1220px) {
-    .wallet-btn-wrap .title{
+    .wallet-btn-wrap .title, .market-wrap .title{
         font-size: 5ch;
     }
     .wallet-btn-wrap .wallet-btn{
         width: 15rem;
         font-size: 2ch;
+    }
+    .wallet-link{
+        font-size: 2.5ch;
     }
     .launch-tile-body h1{
         font-size: 3ch;
@@ -155,7 +174,7 @@
     }
 }
 @media (max-width: 768px){
-    .wallet-btn-wrap .title{
+    .wallet-btn-wrap .title, .market-wrap .title{
         font-size: 4ch;
         margin-left: 3rem;
     }
@@ -165,6 +184,10 @@
         height: 2.5rem;
         width: 10rem;
         margin-right: 3rem;
+    }
+    .wallet-link{
+        margin-right: 3rem;
+        font-size: 2ch;
     }
     .launch-tile-wrap{
         margin: 4rem 4rem;
@@ -181,13 +204,17 @@
     }
 }
 @media (max-width: 425px) {
-    .wallet-btn-wrap .title{
+    .wallet-btn-wrap .title, .market-wrap .title{
         margin-left: 1rem;
         font-size: 3.5ch;
     }
     .wallet-btn-wrap .wallet-btn{
-        width: 8rem;
+        width: 10rem;
         margin-right: 1rem;
+    }
+    .wallet-link{
+        margin-right: 1rem;
+        margin-top: 5rem;
     }
     .launch-tile-wrap{
         margin: 3rem 1.5rem;
@@ -208,5 +235,105 @@
     }
     .mint-btn{
         width: 90vw;
+    }
+}
+
+.market-wrap{
+    margin-bottom: 7rem;
+}
+.market-tiles-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 7rem;
+}
+.market-tile{
+    border: 2px solid rgb(var(--l-color));
+    padding: 1vw;
+    width: 32vw;
+}
+.market-tile-body h4{
+    font-family: var(--t-font);
+    position: relative;
+    color: rgb(var(--l-color));
+    font-size: 2.5ch;
+    display: inline-block;
+    width: fit-content;
+}
+.market-tile-body h4:nth-of-type(2), .market-tile-body h4:nth-of-type(4){
+    right: 0;
+    float: right;
+    text-align: right;
+    background-color: rgb(var(--a-color));
+    color: rgb(var(--d-color));
+}
+#img1{
+    background-image: url(../../asset/Images/spotify.jpg);
+}
+#img2{
+    background-image: url(../../asset/Images/razor.jpg);
+}
+#img1, #img2{
+    width: 30vw;
+    height: 30vw;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+.market-tile .utility{
+    font-family: var(--b-font);
+    color: rgb(var(--l-color));
+    font-size: 2ch;
+    margin: 1vw;
+}
+.market-tile .mint-btn{
+    width: 20vw;
+    margin-left: .5vw;
+    cursor: pointer;
+}
+@media (max-width: 1024px) {
+    .market-tile{
+        width: 35.5vw;
+    }
+    #img1, #img2{
+        width: 33vw;
+        height: 33vw;
+    }
+
+}
+@media (max-width: 768px) {
+    .market-tile{
+        width: 40.5vw;
+    }
+    #img1, #img2{
+        width: 38vw;
+        height: 38vw;
+    }
+    .market-tile-body h4{
+        font-size: 2ch;
+    }
+    .market-tile-body .utility{
+        font-size: 1.5ch;
+        font-weight: 300;
+    }
+    .market-tile-body .mint-btn{
+        height: 2.5rem;
+        line-height: 3ch;
+    }
+}
+@media (max-width: 425px) {
+    .market-tiles-wrap{
+        margin-top: 4rem;
+    }
+    .market-tile{
+        width: 80.5vw;
+        margin-bottom: 2rem;
+    }
+    #img1, #img2{
+        width: 78vw;
+        height: 78vw;
+    }
+    .market-tile-body .mint-btn{
+        width: 45vw;
+        margin-left: 2vw;
     }
 }

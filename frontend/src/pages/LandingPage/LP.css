@@ -107,3 +107,125 @@
     right: 15rem;
     z-index: -10;
 }
+
+@media (max-width: 1440px) {
+    .main-img{
+        width: 30rem;
+        height: 19rem;
+        right: 8rem;
+    }
+    .main-section .title{
+        font-size: 8ch;
+        margin-left: 11rem;
+    }
+}
+@media (max-width: 1220px) {
+    .main-section .title{
+        font-size: 7ch;
+        margin-right: 25rem;
+    }
+    .main-lower-vector{
+        right: 2rem;
+    }
+}
+@media (max-width: 1024px) {
+    .main-section .title{
+        font-size: 6ch;
+        margin-left: 8rem;
+        margin-right: 21rem;
+    }
+    .main-img{
+        width: 25rem;
+        height: 16rem;
+        right: 4rem;
+    }
+    .main-vector{
+        width: 520px;
+    }
+    .about-first, .about-second, .about-third{
+        margin: 2rem 5rem;
+    }
+    .about-body{
+        font-size: 2ch;
+        margin-left: 8rem;
+        line-height: 2.3ch;
+    }
+    .timeline-sect li{
+        margin-left: 11rem;
+        font-size: 2ch;
+    }
+}
+@media (max-width: 768px) {
+    .main-section .title{
+        margin-right: 10rem;
+        margin-left: 4rem;
+    }
+    .main-img{
+        width: 20rem;
+        height: 13rem;
+        right: 3rem;
+    }
+    .main-vector{
+        width: 400px;
+        top: 40vh;
+        left: 19vw;
+    }
+    .market-btn, .business-btn{
+        font-size: 2ch;
+        line-height: 4ch;
+        left: 21%;
+    }
+    .about-first, .about-second, .about-third{
+        margin: 2rem 4rem;
+    }
+    .about-body{
+        margin-left: 6rem;
+        margin-right: 15rem;
+    }
+    .timeline-sect li{
+        margin-left: 9rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .main-section .title{
+        margin-left: 2rem;
+        margin-right: 1rem;
+        font-size: 4ch;
+    }
+    .main-vector{
+        width: 300px;
+        height: 300px;
+        top: 27vh;
+        left: 7vw;
+    }
+    .main-img{
+        top: 35vh;
+        width: 70vw;
+        height: 12rem;
+        right: 4rem;
+    }
+    .market-btn, .business-btn{
+        left: 10%;
+        width: 35vw;
+    }
+    .market-btn::before, .business-btn::before{
+        top: -.5rem;
+        left: -.5rem;
+    }
+    .about-first, .about-second, .about-third{
+        margin: 2rem 2rem;
+        font-size: 3ch;
+    }
+    .about-body{
+        margin-left: 3rem;
+        margin-right: 4rem;
+    }
+    .timeline-sect li{
+        margin-left: 5rem;
+        margin-right: 4rem;
+    }
+    .main-lower-vector{
+        visibility: collapse;
+    }
+}

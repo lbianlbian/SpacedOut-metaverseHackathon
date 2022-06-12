@@ -35,7 +35,9 @@ const LandingPage = () => {
             </defs>
           </svg>
         </div>
-        <div className="market-btn">MarketPlace</div>
+        <Link to={"/marketplace"} className="market-btn">
+          MarketPlace
+        </Link>
         <Link to="/business" className="business-btn">
           Business
         </Link>

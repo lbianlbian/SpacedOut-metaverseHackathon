@@ -64,6 +64,7 @@
     border: 2px solid rgb(var(--a-color));
     position: relative;
     margin-top: 2rem;
+    cursor: pointer;
 }
 .form-wrap button[type=submit]::after{
     content: "";

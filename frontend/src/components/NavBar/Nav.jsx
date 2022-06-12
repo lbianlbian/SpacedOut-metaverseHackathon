@@ -1,16 +1,27 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Nav.css";
 
 const Nav = () => {
+  const navigate = useNavigate();
   const [isMenuActive, setMentActive] = useState();
 
   const toggleMenu = () => {
     setMentActive(!isMenuActive);
   };
+
+  const naviHome = () => {
+    navigate("/");
+    toggleMenu();
+  };
+  const naviMarket = () => {
+    navigate("/marketplace");
+    toggleMenu();
+  };
   return (
     <div className="nav-main">
       <div className="nav-wrap">
-        <div className="menu-btn-container" onClick={toggleMenu} isMenuActive>
+        <div className="menu-btn-container" onClick={toggleMenu}>
           <svg
             viewBox="0 0 46 28"
             fill="none"
@@ -93,9 +104,8 @@ const Nav = () => {
             />
           </svg>
         </div>
-        <div>Home</div>
-        <div>LaunchPad</div>
-        <div>MarketPlace</div>
+        <div onClick={naviHome}>Home</div>
+        <div onClick={naviMarket}>MarketPlace</div>
         <div className="nav-logo"></div>
       </div>
     </div>
