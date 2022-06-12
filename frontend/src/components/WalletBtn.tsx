@@ -63,6 +63,7 @@ const WalletBtn = (props) => {
             console.log("wallet account ", response.publicKey.toString());
             let walletId = response.publicKey.toString();
             props.getWalletId(walletId);
+            props.walletMarket(walletId);
             setWalletKey(response.publicKey.toString());
           } catch (err) {
             // { code: 4001, message: 'User rejected the request.' }

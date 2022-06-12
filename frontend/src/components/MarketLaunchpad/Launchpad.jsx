@@ -1,28 +1,23 @@
 import React, { useState } from "react";
 import WalletBtn from "../WalletBtn.tsx";
-import axios from "axios";
 import "./MarketLaunch.css";
 
-const Launchpad = () => {
+const Launchpad = (props) => {
   const [walletID, setwalletID] = useState("");
 
   const getWalletId = (gotWalletId) => {
     setwalletID(gotWalletId);
   };
-  const mintNft = async (url, name) => {
-    let res = await axios.get(
-      `https://austinplex.wesleybian.repl.co/mint?address=${walletID}&jsonFile=${url}&biz=${name}`
-    );
-    let { data } = res.data;
-    // let finalUrl = `https://austinplex.wesleybian.repl.co/mint?address=${walletID}&jsonFile=${url}&biz=${name}`;
-    console.log(data);
+  const mintNft = (url, name) => {
+    let finalUrl = `https://austinplex.wesleybian.repl.co/mint?address=${walletID}&jsonFile=${url}&biz=${name}`;
+    window.open(finalUrl, "_blank");
   };
 
   return (
     <div className="launch-wrap">
       <div className="wallet-btn-wrap">
         <h3 className="title">LaunchPad.</h3>
-        <WalletBtn getWalletId={getWalletId} />
+        <WalletBtn getWalletId={getWalletId} walletMarket={props.getWalletId} />
       </div>
       <div className="launch-tile-wrap">
         <div className="launch-tile-body">
