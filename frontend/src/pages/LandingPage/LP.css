@@ -229,3 +229,11 @@
         visibility: collapse;
     }
 }
+@media (max-height: 750px) {
+    .main-section{
+        height: 100vh;
+    }
+    .main-lower-vector{
+        top: 150vh;
+    }
+}
