@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Gucci NFT Checker</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('https://www.theskinnybeep.com/wp-content/uploads/2020/01/Catwalk-Gucci.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+<script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js" > </script> 
+<script src = "https://lbianlbian.github.io/metaverseHackathon/nftDetector.js" > </script> 
+  
+<script>
+var globalKey;
+var globalProvider;
+var connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl("testnet"), "confirmed");
+var tokenProgramID = new solanaWeb3.PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA");
+
+
+async function phantom_connect() {
+
+  // Check for Solana & Phantom
+  var provider = () => {
+    if ("solana" in window) {
+      var provider = window.solana;
+	globalProvider = provider;
+      if (provider.isPhantom) {
+        return provider;
+      } else {
+        return false;
+      }
+    }
+    window.open("https://phantom.app", "_blank");
+  };
+
+  var phantom = provider();
+
+  if (phantom !== false) {
+
+    console.log("Phantom Wallet Found, Connecting..");
+
+    try {
+
+      // Connect to Solana
+      var connect_wallet = phantom.connect();
+
+      // After Connecting
+      phantom.on("connect", async () => {
+
+        // Check Connection
+        console.log("Phantom Connected: " + phantom.isConnected);
+
+        // Get Wallet Address
+        var wallet_address = phantom.publicKey.toString();
+	document.getElementById("wallet").innerHTML = wallet_address;
+        document.getElementById("status").innerHTML = "Wallet is connected. Now checking for NFT. This will take a few seconds.";
+	globalKey = phantom.publicKey;
+        var tokenResult = await checkTokens(phantom.publicKey.toString(), "Gucci");
+        console.log(tokenResult);
+        if(tokenResult){
+          document.getElementById("status").innerHTML = "You own our NFT! Congratulations, you have access to exclusive Gucci events.";
+        }
+        else{
+          document.getElementById("status").innerHTML = "Sorry, you don't own our NFT, but you can buy or mint it on SpacedOut.";
+        }
+	
+     });
+     } catch (err) {
+        console.log("Connection Cancelled!");
+    }
+  }
+}
+</script>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge" id = "wallet">
+<button onclick = "phantom_connect()"> Connect Phantom Wallet </button>    
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">Gucci NFT checker</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p id = "status" class="w3-large w3-center">Please connect your wallet first. </p>
+  </div>
+</div>
+</body>
+</html>
