@@ -8,13 +8,28 @@ const Launchpad = (props) => {
   const getWalletId = (gotWalletId) => {
     setwalletID(gotWalletId);
   };
+
+  const [isWalletActive, setisWalletActive] = useState("");
+
   const mintNft = (url, name) => {
-    let finalUrl = `https://austinplex.wesleybian.repl.co/mint?address=${walletID}&jsonFile=${url}&biz=${name}`;
-    window.open(finalUrl, "_blank");
+    if (walletID === "") {
+      setisWalletActive((prevState) => !prevState);
+    } else {
+      let finalUrl = `https://austinplex.wesleybian.repl.co/mint?address=${walletID}&jsonFile=${url}&biz=${name}`;
+      window.open(finalUrl, "_blank");
+    }
   };
 
   return (
     <div className="launch-wrap">
+      <div
+        className={`buy-popup-wrap ${isWalletActive && "buy-popup-open"}`}
+        onClick={mintNft}
+      >
+        <div className="buy-popup">
+          <p>Error: Please connect your Phantom wallet first!</p>
+        </div>
+      </div>
       <div className="wallet-btn-wrap">
         <h3 className="title">LaunchPad.</h3>
         <WalletBtn getWalletId={getWalletId} walletMarket={props.getWalletId} />

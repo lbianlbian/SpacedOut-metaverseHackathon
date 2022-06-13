@@ -30,6 +30,10 @@ interface PhantomProvider {
   request: (method: PhantomRequestMethod, params: any) => Promise<unknown>;
 }
 
+interface variables {
+  prevState: boolean;
+}
+
 
 const WalletBtn = (props) => {
     const [provider, setProvider] = useState<PhantomProvider | undefined>(
@@ -92,27 +96,46 @@ const WalletBtn = (props) => {
         if (provider) setProvider(provider);
         else setProvider(undefined);
       }, []);
+
+      const [isPopupActive, setisPopupActive] = useState<variables | boolean>(Boolean);
+
+      const togglePopup = () =>{
+        setisPopupActive((prevState) => !prevState);
+      }
     
   
   if (provider) {
     if (walletKey) {
-      return (
-        <div
-          onClick={disconnectWallet}
-          className="wallet-btn"
-        >
-          Disconnect from Phantom
-        </div>
+      return (          
+          <div
+            onClick={disconnectWallet}
+            className="wallet-btn"
+          >
+            Disconnect from Phantom
+          </div>
       );
     }
 
     return (
-      <div
+      <div>
+        <div className={`popup-wrap ${isPopupActive && "popup-open"}`} onClick={togglePopup}>
+        <div className="wallet-popup">
+        <p>Change the network of the Phantom wallet to Testnet <br />
+          <span>Settings - Network - Testnet</span></p>
+          <div
         onClick={connectWallet}
         className="wallet-btn"
       >
-        Connect to Phantom
+          Connect to Phantom
+        </div>
       </div>
+        </div>
+      <div
+      onClick={togglePopup}
+        className="wallet-btn"
+      >
+          Connect to Phantom
+        </div></div>
     );
   }
   else return (

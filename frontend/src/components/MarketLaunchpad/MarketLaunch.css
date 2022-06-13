@@ -337,3 +337,122 @@
         margin-left: 2vw;
     }
 }
+
+
+
+/* Wallet Popup */
+
+.popup-wrap{
+    position: fixed;
+    background-color: rgb(var(--d-color), .5);
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    visibility: collapse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup-open{
+    visibility: visible;
+}
+.wallet-popup{
+    background-color: rgb(var(--a-color));
+    width: 45vw;
+    height: 25vw;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.wallet-popup p{
+    font-family: var(--b-font);
+    color: rgb(var(--d-color));
+    font-size: 3ch;
+    text-align: center;
+}
+.wallet-popup p span{
+    font-weight: 600;
+}
+.wallet-popup .wallet-btn{
+    margin-right: 0;
+    border: 2px solid rgb(var(--d-color));
+    color: rgb(var(--d-color));
+}
+.wallet-popup .wallet-btn:hover{
+    background-color: rgb(var(--d-color));
+    color: rgb(var(--l-color));
+}
+
+.buy-popup-wrap{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(var(--d-color), .5);
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: collapse;
+}
+.buy-popup-open{
+    visibility: visible;
+}
+.buy-popup{
+    width: 30vw;
+    height: 20vw;
+    background-color: rgb(var(--a-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buy-popup p{
+    font-family: var(--b-font);
+    font-size: 3ch;
+    font-weight: 600;
+    color: rgb(var(--d-color));
+    text-align: center;
+}
+
+@media (max-width: 1220px) {
+    .wallet-popup{
+        width: 55vw;
+    }
+    .buy-popup{
+        width: 40vw;
+    }
+}
+@media (max-width: 1024px) {
+    .wallet-popup p{
+        font-size: 2ch;
+    }
+    .buy-popup{
+        padding: 2rem;
+    }
+    .buy-popup p{
+        font-size: 2ch;
+    }
+}
+@media (max-width: 768px) {
+    .buy-popup{
+        width: 50vw;
+        height: 25vw;
+    }
+}
+@media (max-width: 425px) {
+    .wallet-popup{
+        width: 80vw;
+        height: 55vw;
+    }
+    .buy-popup{
+        width: 80vw;
+        height: 80vw;
+    }
+}

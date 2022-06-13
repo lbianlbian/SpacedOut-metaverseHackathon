@@ -7,6 +7,56 @@
 .form1-container{
     margin-top: 5rem;
 }
+.form-wrap .wallet-popup{
+    width: 60vw;
+}
+.form-wrap .popup-wrap p{
+    margin: 2rem 0rem;
+}
+.form-wrap .popup-wrap .divider{
+    border: 2px solid rgb(var(--d-color));
+    height: 2px;
+    width: 25vw;
+}
+.form-wrap .popup-wrap .wallet-btn{
+    width: 20vw;
+    height: 3rem;
+    font-family: var(--t-font);
+    text-align: center;
+    font-size: 3ch;
+    color: rgb(var(--d-color));
+    line-height: 3ch;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+@media (max-width: 1220px) {
+    .form-wrap .wallet-popup{
+        height: 35vw;
+    }
+}
+@media (max-width: 1024px) {
+    .form-wrap .wallet-popup .wallet-btn{
+        font-size: 2ch;
+    }
+}
+@media (max-width: 768px) {
+    .form-wrap .wallet-popup{
+        width: 90vw;
+        height: 60vw;
+    }
+    .form-wrap .wallet-popup .wallet-btn{
+        height: 2rem;
+        width: 30vw;
+    }
+}
+@media (max-width: 425px) {
+    .form-wrap .wallet-popup{
+        height: 90vw;
+    }
+    .form-wrap .wallet-popup .wallet-btn{
+        width: 50vw;
+    }
+}
 .form-wrap h1, .form-wrap label, .form-wrap button, .form-wrap input, .form-wrap textarea{
     font-family: var(--t-font);
     color: rgb(var(--l-color));

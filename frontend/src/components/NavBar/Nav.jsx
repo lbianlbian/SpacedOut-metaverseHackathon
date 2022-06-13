@@ -18,6 +18,11 @@ const Nav = () => {
     navigate("/marketplace");
     toggleMenu();
   };
+
+  const naviVerify = () => {
+    window.open("https://gucci.wesleybian.repl.co/", "_blank");
+  };
+
   return (
     <div className="nav-main">
       <div className="nav-wrap">
@@ -106,6 +111,7 @@ const Nav = () => {
         </div>
         <div onClick={naviHome}>Home</div>
         <div onClick={naviMarket}>MarketPlace</div>
+        <div onClick={naviVerify}>Verify NFTs</div>
         <div className="nav-logo"></div>
       </div>
     </div>
