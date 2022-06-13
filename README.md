@@ -12,7 +12,7 @@ This file codes for a website that checks whether the visitor holds the Gucci NF
 The site is live at https://gucci.wesleybian.repl.co
 ### nftDetector.js
 This file uses the solana/web3-js library to check if a user has an NFT. It also calls NFTsToCompanies to check if an NFT was issued by a company.
-### NFTsToCompanies.gs
+### NFTstoCompanies.gs
 This file is a Google Apps Script (GAS) file, which is a language that allows developers to connect Google services with web applications. We use this code to set and determine whether NFTs match with a company. 
 ### frontend folder
 This folder contains a React.js app that connects all of the above in a beautiful website.
@@ -23,3 +23,4 @@ We used IPFS to host the metadata and image files of the NFTs we created.
 ## Other
 All NFTs on our site are on the Solana Testnet network, and do not cost neither real $SOL, nor Testnet $SOL. Please install the phantom wallet browser extension, the recommended wallet extension for the Solana blockchain, to fully experience our demo. 
 # Thank you very much for reading, and please consider trying out our demo and voting for us!
+## Hackathon link: https://dorahacks.io/hackathon/21/
