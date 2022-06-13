@@ -21,6 +21,8 @@ This file is a Google Apps Script (GAS) file, which is a language that allows de
 This folder contains a React.js app that connects all of the above in a beautiful website.
 ### Whitepaper (PDF file)
 This file is an in-depth explanation of our vision for SpacedOut!
+### SpacedOut Presentation
+This is a presentation about SpacedOut.
 ## How we used IPFS
 We used IPFS to host the metadata and image files of the NFTs we created.
 ## Other
