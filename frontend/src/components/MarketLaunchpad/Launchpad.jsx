@@ -28,7 +28,7 @@ const Launchpad = (props) => {
             Gucci is an Italian high-end luxury fashion house based in Florence,
             Italy. Its product lines include handbags, ready-to-wear, footwear,
             and accessories, makeup, fragrances, and home decoration. These NFTs
-            will provide discounts on different categories of products.
+            will provide access to special Gucci events.
           </p>
           <div
             className="mint-btn"

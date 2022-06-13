@@ -45,11 +45,11 @@ const LandingPage = () => {
       <div className="timeline-sect">
         <h3 className="about-first">Marketplace.</h3>
         <p className="about-body">
-          ACW is a marketplace for businesses and brands to create greater
-          relationships with their loyal customers. Owning one of your favorite
-          brands NFTs, will give you utility such as discounts, promotions,
-          events, etc. Whatever the brand decieds to give its holders is fair
-          game.
+          SpacedOut! is a marketplace for businesses and brands to create
+          greater relationships with their loyal customers. Owning one of your
+          favorite brands NFTs, will give you utility such as discounts,
+          promotions, events, etc. Whatever the brand decides to give its
+          holders is fair game.
         </p>
         <h3 className="about-second">SpacedOut NFTs.</h3>
         <p className="about-body">

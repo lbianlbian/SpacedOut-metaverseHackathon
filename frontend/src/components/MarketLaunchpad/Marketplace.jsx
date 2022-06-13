@@ -14,8 +14,8 @@ const Marketplace = (props) => {
           <div className="tile-img" id="img1"></div>
           <div className="market-tile-body">
             <h4>Spotify Voucher.</h4>
-            <h4>23.56 SOL</h4>
-            <p className="utility">Benifit: Get free premium for 1 year.</p>
+            <h4>00.00 SOL</h4>
+            <p className="utility">Benefit: Get free premium for 1 year.</p>
             <div
               className="mint-btn"
               onClick={() =>
@@ -33,10 +33,8 @@ const Marketplace = (props) => {
           <div className="tile-img" id="img2"></div>
           <div className="market-tile-body">
             <h4>Razer Voucher.</h4>
-            <h4>50.45 SOL</h4>
-            <p className="utility">
-              Benifit: Get a free Razor mouse and deskpad.
-            </p>
+            <h4>00.00 SOL</h4>
+            <p className="utility">Benefit: Get 5% off on all products.</p>
             <div
               className="mint-btn"
               onClick={() =>
