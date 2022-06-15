@@ -1,6 +1,6 @@
 # SpacedOut's Github Repository Submission for Ken Labs Metaverse hackathon 2022
 ## Our demo is live at <a href = "https://deft-cannoli-eb482a.netlify.app/" target = "_blank"> https://deft-cannoli-eb482a.netlify.app/ </a>
-Keep in mind that minting may take up to 1 minute. 
+Keep in mind that minting may take up to 1 minute, and there is a limited supply of NFTs.
 ## See a video here: https://vimeo.com/719992613
 ## About SpacedOut
 Spacedout offers brands and businesses an easy access to create their own NFT and launch it without paying artists and developers large fees. The purpose of the platform is to help brands and businesses give back to their most loyal customers without taking the time and money to develop an NFT. See our whitepaper in this github repository for more information. 
